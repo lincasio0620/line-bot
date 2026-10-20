@@ -9,9 +9,12 @@ def home():
 @app.route("/callback", methods=["POST"])
 def callback():
 
+    print("=" * 50)
+    print("收到 LINE 訊息")
     print(request.json)
+    print("=" * 50)
 
-    return "OK"
+    return "OK", 200
 
 if __name__ == "__main__":
     app.run()
